@@ -1,0 +1,23 @@
+{
+    "port": 4000,
+    "authenticationSecret": "THIS IS USED TO SIGN AND VERIFY JWT TOKENS, REPLACE IT WITH YOUR OWN SECRET, IT CAN BE ANY STRING",
+    "MONGODB_URL": "your_database_url",
+    "logging": {
+        "appenders": {
+            "logger-file": {
+                "type": "file",
+                "filename": "logger.log",
+                "maxLogSize": 2000000
+            }
+        },
+        "categories": {
+            "default": {
+                "appenders": [
+                    "logger-file"
+                ],
+                "level": "trace"
+            }
+        }
+    },
+    "tokenExpireInTime": 600
+}
